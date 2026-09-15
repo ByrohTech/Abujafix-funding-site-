@@ -1,0 +1,550 @@
+<!DOCTYPE html>
+<html lang="en" class="dark scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Abujafix Solutions Limited - Secure Abuja's Future</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/framer-motion/10.16.4/framer-motion.js"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        darkbg: '#070709',
+                        cardbg: '#111118',
+                        accent: '#2563eb',
+                        accentglow: '#3b82f6',
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-darkbg text-slate-100 font-sans antialiased selection:bg-blue-600 selection:text-white overflow-x-hidden">
+
+    <!-- Header / Nav -->
+    <header class="fixed top-0 left-0 right-0 z-50 backdrop-blur-xl bg-darkbg/80 border-b border-slate-800/60">
+        <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+            <div class="flex items-center space-x-3">
+                <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-blue-600 to-indigo-500 flex items-center justify-center font-bold text-xl shadow-lg shadow-blue-500/30">A</div>
+                <span class="text-xl font-bold tracking-tight">Abuja<span class="text-blue-500">fix</span></span>
+            </div>
+            <div class="flex items-center gap-3">
+                <a href="#executive-plan" class="hidden sm:inline-block text-xs font-semibold text-slate-400 hover:text-white transition-colors">Executive Plan</a>
+                <a href="#donate" class="bg-blue-600 hover:bg-blue-500 text-white px-5 py-2.5 rounded-xl font-medium text-sm transition-all shadow-lg shadow-blue-600/30 hover:scale-105">Support Project</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="relative pt-32 pb-20 md:pt-44 md:pb-32 overflow-hidden">
+        <div class="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] md:w-[700px] h-[500px] md:h-[700px] bg-blue-600/10 rounded-full blur-[120px] pointer-events-none"></div>
+        
+        <div class="max-w-7xl mx-auto px-6 relative z-10">
+            <div class="max-w-3xl mx-auto text-center">
+                <div class="inline-flex items-center space-x-2 px-4 py-1.5 rounded-full bg-blue-500/10 border border-blue-500/20 text-blue-400 text-xs font-semibold uppercase tracking-wider mb-6 backdrop-blur-md">
+                    <span>Civic Infrastructure & Public Safety</span>
+                </div>
+                <h1 class="text-4xl sm:text-5xl md:text-6xl font-extrabold tracking-tight mb-6 leading-tight">
+                    Digitizing Public Safety & <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-indigo-300 to-blue-600">Civic Reporting</span> in Abuja
+                </h1>
+                <p class="text-base sm:text-lg md:text-xl text-slate-400 mb-8 leading-relaxed max-w-2xl mx-auto">
+                    Connecting citizens directly with emergency response agencies through real-time GPS geospatial intelligence and automated dispatch routing across the Federal Capital Territory.
+                </p>
+
+                <!-- Compelling Call to Action Quote Box -->
+                <div class="bg-blue-950/30 border border-blue-500/30 p-5 md:p-6 rounded-2xl mb-10 text-blue-200 text-sm md:text-base font-medium shadow-xl shadow-blue-950/50 backdrop-blur-xl text-left sm:text-center">
+                    💡 <em>"Every minute delayed in infrastructure reporting is a life or resource compromised. Join us today to deploy next-generation emergency tracking system, eliminate agency coordination failures, and build a safer Abuja for active millions of citizens."</em>
+                </div>
+
+                <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+                    <a href="#donate" class="w-full sm:w-auto bg-blue-600 hover:bg-blue-500 text-white px-8 py-4 rounded-xl font-semibold transition-all shadow-xl shadow-blue-600/30 hover:scale-105 text-center">Fund the Mission</a>
+                    <a href="#executive-plan" class="w-full sm:w-auto bg-slate-900/80 hover:bg-slate-800 text-slate-300 border border-slate-800 px-8 py-4 rounded-xl font-semibold transition-all flex items-center justify-center gap-2 backdrop-blur-md">View Executive Plan 📄</a>
+                </div>
+            </div>
+
+            <!-- Interactive Metrics & Progress Bar Widget -->
+            <div class="mt-16 max-w-4xl mx-auto bg-cardbg border border-slate-800 rounded-3xl p-6 md:p-8 shadow-2xl backdrop-blur-xl">
+                <div class="flex flex-col md:flex-row justify-between items-start md:items-center gap-4 mb-6">
+                    <div>
+                        <div class="text-xs text-blue-400 uppercase tracking-wider font-bold mb-1">Phase 1 Pilot Campaign</div>
+                        <div class="text-xl md:text-2xl font-extrabold text-white">Target Milestone: $200,000.00 <span class="text-xs text-slate-400 font-normal">(~₦300m)</span></div>
+                    </div>
+                    <div class="text-left md:text-right">
+                        <span class="text-xs text-slate-400">Current Progress</span>
+                        <div class="text-xl font-mono font-bold text-blue-400">9% Funded ($18,000)</div>
+                    </div>
+                </div>
+                <!-- Progress Bar -->
+                <div class="w-full bg-slate-900 h-3 rounded-full overflow-hidden mb-6 border border-slate-800/80">
+                    <div class="bg-gradient-to-r from-blue-600 to-indigo-500 h-full rounded-full transition-all duration-1000" style="width: 9%;"></div>
+                </div>
+                <!-- Mini Stats Grid -->
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-4 text-center pt-4 border-t border-slate-800/80">
+                    <div class="p-2">
+                        <div class="text-base md:text-lg font-bold text-white">&lt; 15 mins</div>
+                        <div class="text-xs text-slate-400">Target Response SLA</div>
+                    </div>
+                    <div class="p-2">
+                        <div class="text-base md:text-lg font-bold text-white">4 Agencies</div>
+                        <div class="text-xs text-slate-400">Integrated Routing</div>
+                    </div>
+                    <div class="p-2">
+                        <div class="text-base md:text-lg font-bold text-white">100%</div>
+                        <div class="text-xs text-slate-400">Non-Commercial Civic Mandate</div>
+                    </div>
+                    <div class="p-2">
+                        <div class="text-base md:text-lg font-bold text-white">RC: 9777836</div>
+                        <div class="text-xs text-slate-400">Fully Incorporated Entity</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Visual & Video Demonstration Section -->
+    <section class="py-20 border-t border-slate-900/60 bg-slate-950/40">
+        <div class="max-w-5xl mx-auto px-6">
+            <div class="text-center mb-12">
+                <h2 class="text-2xl md:text-3xl font-bold tracking-tight mb-2 text-white">Platform in Action</h2>
+                <p class="text-slate-400 text-sm">Visual overview of live incident routing and emergency response tracking.</p>
+            </div>
+            <div class="grid md:grid-cols-2 gap-8 items-center">
+                <!-- Image Container 1 -->
+                <div class="bg-cardbg border border-slate-800 rounded-2xl overflow-hidden shadow-2xl group hover:border-slate-700 transition-all">
+                    <div class="overflow-hidden h-60">
+                        <img src="https://images.unsplash.com/photo-1551836022-d5d88e9218df?auto=format&fit=crop&w=800&q=80" alt="Live Telemetry Simulation" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                    </div>
+                    <div class="p-5 bg-cardbg">
+                        <div class="text-xs font-bold text-blue-400 mb-1">Live Telemetry Simulation</div>
+                        <div class="text-xs text-slate-400">Real-time mapping grid across FCT municipal zones.</div>
+                    </div>
+                </div>
+
+                <!-- Institutional Dashboard Card -->
+                <div class="bg-cardbg border border-slate-800 rounded-2xl overflow-hidden shadow-2xl p-6 md:p-8 flex flex-col justify-between h-full">
+                    <div>
+                        <div class="w-12 h-12 rounded-xl bg-emerald-500/10 border border-emerald-500/30 flex items-center justify-center text-emerald-400 text-xl mb-4">⚡</div>
+                        <div class="text-xs font-bold text-emerald-400 uppercase tracking-wider mb-1">Institutional Dashboard</div>
+                        <h3 class="text-xl font-bold text-white mb-3">Centralized Emergency Command</h3>
+                        <p class="text-slate-400 text-sm leading-relaxed mb-6">Designed specifically for public administrators to streamline incident logs, dispatch rescue units, and track resolution metrics with absolute transparency.</p>
+                    </div>
+                    <div class="flex items-center gap-2 text-xs text-slate-400 pt-4 border-t border-slate-800/80">
+                        <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span> Systems Operational & Ready for Deployment
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+            
+    <!-- Live Incident Preview Feed Section -->
+    <section id="demo" class="py-20 border-t border-slate-900/60 bg-darkbg">
+        <div class="max-w-5xl mx-auto px-6">
+            <div class="text-center mb-12">
+                <h2 class="text-2xl md:text-3xl font-bold tracking-tight mb-2 text-white">Simulated Live Command Feed</h2>
+                <p class="text-slate-400 text-sm">Real-time tracking of reported municipal events across FCT districts.</p>
+            </div>
+            
+            <div class="space-y-4 max-w-3xl mx-auto">
+                <!-- Incident 1 -->
+                <div class="bg-cardbg border border-slate-800 p-4 md:p-5 rounded-2xl flex items-center justify-between gap-4 shadow-lg">
+                    <div class="flex items-center space-x-3.5">
+                        <div class="w-10 h-10 rounded-xl bg-amber-500/10 border border-amber-500/30 flex items-center justify-center text-amber-400 text-lg shrink-0">⚠️</div>
+                        <div>
+                            <div class="text-sm font-bold text-white">Drainage Blockage & Flooding Risk</div>
+                            <div class="text-xs text-slate-400">Wuse Zone 4, Abuja FCT • Dispatched to Public Works</div>
+                        </div>
+                    </div>
+                    <span class="text-xs bg-emerald-500/10 text-emerald-400 px-3 py-1 rounded-full border border-emerald-500/20 font-medium whitespace-nowrap">Resolved</span>
+                </div>
+
+                <!-- Incident 2 -->
+                <div class="bg-cardbg border border-slate-800 p-4 md:p-5 rounded-2xl flex items-center justify-between gap-4 shadow-lg">
+                    <div class="flex items-center space-x-3.5">
+                        <div class="w-10 h-10 rounded-xl bg-blue-500/10 border border-blue-500/30 flex items-center justify-center text-blue-400 text-lg shrink-0">🚒</div>
+                        <div>
+                            <div class="text-sm font-bold text-white">Electrical Fault Hazard</div>
+                            <div class="text-xs text-slate-400">Gwarimpa Estate Rd 21 • Dispatched to Fire Services</div>
+                        </div>
+                    </div>
+                    <span class="text-xs bg-blue-500/10 text-blue-400 px-3 py-1 rounded-full border border-blue-500/20 font-medium whitespace-nowrap">In Progress</span>
+                </div>
+
+                <!-- Incident 3 -->
+                <div class="bg-cardbg border border-slate-800 p-4 md:p-5 rounded-2xl flex items-center justify-between gap-4 shadow-lg">
+                    <div class="flex items-center space-x-3.5">
+                        <div class="w-10 h-10 rounded-xl bg-purple-500/10 border border-purple-500/30 flex items-center justify-center text-purple-400 text-lg shrink-0">🛡️</div>
+                        <div>
+                            <div class="text-sm font-bold text-white">Broken Streetlight Infrastructure</div>
+                            <div class="text-xs text-slate-400">Central Business District (CBD) • Dispatched to Municipal Admin</div>
+                        </div>
+                    </div>
+                    <span class="text-xs bg-amber-500/10 text-amber-400 px-3 py-1 rounded-full border border-amber-500/20 font-medium whitespace-nowrap">Inspecting</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Partner & Stakeholder Verification Section -->
+    <section class="py-16 border-t border-slate-900/60 bg-slate-950/20">
+        <div class="max-w-5xl mx-auto px-6 text-center">
+            <h3 class="text-xs uppercase tracking-widest text-slate-500 font-bold mb-8">Institutional Alignment & Municipal Framework</h3>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4 text-slate-300 text-sm font-medium">
+                <div class="bg-cardbg border border-slate-800 p-4 rounded-xl shadow-sm">FCT Administration Liaison</div>
+                <div class="bg-cardbg border border-slate-800 p-4 rounded-xl shadow-sm">Emergency Dispatch Routing</div>
+                <div class="bg-cardbg border border-slate-800 p-4 rounded-xl shadow-sm">Geospatial Mapping Grid</div>
+                <div class="bg-cardbg border border-slate-800 p-4 rounded-xl shadow-sm">Corporate RC: 9777836</div>
+            </div>
+        </div>
+    </section>
+            
+    <!-- Milestone & Funding Highlights -->
+    <section class="py-20 border-t border-slate-900/60 bg-slate-950/40">
+        <div class="max-w-5xl mx-auto px-6">
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-cardbg border border-slate-800/80 p-8 rounded-2xl shadow-xl">
+                    <div class="text-blue-500 text-sm font-semibold uppercase tracking-wider mb-2">Phase 1 Target</div>
+                    <div class="text-3xl font-extrabold text-white mb-2">$200k - ₦300m</div>
+                    <p class="text-slate-400 text-sm">Initial pilot deployment and infrastructure hardening for early users.</p>
+                </div>
+                <div class="bg-cardbg border border-slate-800/80 p-8 rounded-2xl shadow-xl">
+                    <div class="text-blue-500 text-sm font-semibold uppercase tracking-wider mb-2">Target Adoption</div>
+                    <div class="text-3xl font-extrabold text-white mb-2">100k+</div>
+                    <p class="text-slate-400 text-sm">Active citizens reporting and tracking local infrastructure emergencies.</p>
+                </div>
+                <div class="bg-cardbg border border-slate-800/80 p-8 rounded-2xl shadow-xl">
+                    <div class="text-blue-500 text-sm font-semibold uppercase tracking-wider mb-2">Execution Entity</div>
+                    <div class="text-xl font-bold text-white mb-2">Abujafix Solutions Ltd</div>
+                    <p class="text-slate-400 text-sm">RC: 9777836 - Formally registered corporate structure ready for institutional grants.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Direct Bank Transfer Details Section -->
+    <section id="donate" class="py-24 relative bg-darkbg">
+        <div class="max-w-4xl mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold tracking-tight mb-4 text-white">Direct Corporate Support</h2>
+                <p class="text-slate-400 max-w-lg mx-auto text-sm md:text-base">Direct contributions can be securely routed into our official multi-currency corporate accounts with Guaranty Trust Bank.</p>
+            </div>
+
+            <div class="bg-cardbg border border-slate-800 rounded-3xl p-6 sm:p-8 md:p-12 shadow-2xl relative overflow-hidden">
+                <div class="absolute top-0 right-0 w-64 h-64 bg-blue-600/5 rounded-full blur-3xl pointer-events-none"></div>
+
+                <div class="mb-8 pb-6 border-b border-slate-800 flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4">
+                    <div>
+                        <div class="text-xs text-slate-500 uppercase tracking-wider font-semibold">Account Name</div>
+                        <div class="text-base sm:text-lg font-bold text-white tracking-wide">Abujafix Solutions Limited</div>
+                    </div>
+                    <div>
+                        <div class="text-xs text-slate-500 uppercase tracking-wider font-semibold">Bank Institution</div>
+                        <div class="text-base sm:text-lg font-bold text-blue-400 tracking-wide">GTB (Guaranty Trust Bank)</div>
+                    </div>
+                </div>
+
+                <div class="grid sm:grid-cols-2 gap-4">
+                    <!-- Naira -->
+                    <div class="bg-slate-900/80 border border-slate-800 p-5 rounded-2xl flex items-center justify-between">
+                        <div>
+                            <span class="text-xs font-semibold text-slate-400 uppercase tracking-wider">Naira Account (NGN)</span>
+                            <div id="acc-ngn" class="text-lg sm:text-xl font-mono font-bold text-white mt-1">3005481404</div>
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <span class="text-xs bg-blue-500/10 text-blue-400 px-2.5 py-1 rounded-lg border border-blue-500/20 font-medium">NGN</span>
+                            <button onclick="copyToClipboard('3005481404', this)" class="bg-slate-800 hover:bg-slate-700 text-slate-300 text-xs px-3 py-2 rounded-xl transition-all cursor-pointer">Copy</button>
+                        </div>
+                    </div>
+
+                    <!-- Dollar -->
+                    <div class="bg-slate-900/80 border border-slate-800 p-5 rounded-2xl flex items-center justify-between">
+                        <div>
+                            <span class="text-xs font-semibold text-slate-400 uppercase tracking-wider">US Dollar Account (USD)</span>
+                            <div id="acc-usd" class="text-lg sm:text-xl font-mono font-bold text-white mt-1">3005481507</div>
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <span class="text-xs bg-emerald-500/10 text-emerald-400 px-2.5 py-1 rounded-lg border border-emerald-500/20 font-medium">USD</span>
+                            <button onclick="copyToClipboard('3005481507', this)" class="bg-slate-800 hover:bg-slate-700 text-slate-300 text-xs px-3 py-2 rounded-xl transition-all cursor-pointer">Copy</button>
+                        </div>
+                    </div>
+
+                    <!-- Pound -->
+                    <div class="bg-slate-900/80 border border-slate-800 p-5 rounded-2xl flex items-center justify-between">
+                        <div>
+                            <span class="text-xs font-semibold text-slate-400 uppercase tracking-wider">Pound Sterling (GBP)</span>
+                            <div id="acc-gbp" class="text-lg sm:text-xl font-mono font-bold text-white mt-1">3005481545</div>
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <span class="text-xs bg-indigo-500/10 text-indigo-400 px-2.5 py-1 rounded-lg border border-indigo-500/20 font-medium">GBP</span>
+                            <button onclick="copyToClipboard('3005481545', this)" class="bg-slate-800 hover:bg-slate-700 text-slate-300 text-xs px-3 py-2 rounded-xl transition-all cursor-pointer">Copy</button>
+                        </div>
+                    </div>
+
+                    <!-- Euro -->
+                    <div class="bg-slate-900/80 border border-slate-800 p-5 rounded-2xl flex items-center justify-between">
+                        <div>
+                            <span class="text-xs font-semibold text-slate-400 uppercase tracking-wider">Euro Account (EUR)</span>
+                            <div id="acc-eur" class="text-lg sm:text-xl font-mono font-bold text-white mt-1">3005481521</div>
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <span class="text-xs bg-amber-500/10 text-amber-400 px-2.5 py-1 rounded-lg border border-amber-500/20 font-medium">EUR</span>
+                            <button onclick="copyToClipboard('3005481521', this)" class="bg-slate-800 hover:bg-slate-700 text-slate-300 text-xs px-3 py-2 rounded-xl transition-all cursor-pointer">Copy</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mt-8 pt-6 border-t border-slate-800 text-center text-xs text-slate-400 space-y-1.5">
+                    <p><strong>Corporate HQ:</strong> Bagaji Plaza Rd 21, 2nd Avenue Gwarimpa Abuja FCT, Nigeria.</p>
+                    <p><strong>Direct Contact:</strong> 08034106662 | <strong>Email:</strong> abujaeco@gmail.com</p>
+                    <p class="text-slate-500 pt-2">For institutional grants, formal Memorandums of Understanding (MoU), or partnership verification, contact the Office of the CEO directly.</p>
+                </div>
+            </div>
+        </div>
+    </section> 
+
+    <!-- Executive Roadmap & $745K Seed Allocation Section -->
+    <section id="executive-plan" class="py-20 border-t border-slate-900/60 bg-slate-950/80">
+        <div class="max-w-6xl mx-auto px-6">
+            <!-- Section Header -->
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <div class="text-xs uppercase tracking-widest text-blue-400 font-bold mb-2">Phase 1 Strategic Execution</div>
+                <h2 class="text-3xl md:text-4xl font-extrabold text-white tracking-tight mb-4">Abujafix $745,000 Seed Roadmap</h2>
+                <p class="text-slate-400 text-sm md:text-base">
+                    Transforming urban governance and civic resilience across Abuja FCT with a clear 12-month runway for headquarters setup, core platform scaling, and municipal pilot rollouts.
+                </p>
+            </div>
+
+            <!-- Visual Roadmap Timeline -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6 mb-16 relative">
+                <!-- Roadmap Card 1 -->
+                <div class="bg-cardbg border border-slate-800 rounded-2xl p-6 relative shadow-xl hover:border-blue-500/40 transition-all">
+                    <div class="w-10 h-10 rounded-xl bg-blue-600/10 border border-blue-500/30 flex items-center justify-center text-blue-400 font-mono font-bold mb-4">01</div>
+                    <h3 class="text-lg font-bold text-white mb-2">Fully Operational Abuja HQ</h3>
+                    <p class="text-slate-400 text-xs leading-relaxed">
+                        Establish a central workspace in Abuja to build corporate credibility and direct stakeholder engagements with government ministers and council chairmen.
+                    </p>
+                </div>
+
+                <!-- Roadmap Card 2 -->
+                <div class="bg-cardbg border border-slate-800 rounded-2xl p-6 relative shadow-xl hover:border-indigo-500/40 transition-all">
+                    <div class="w-10 h-10 rounded-xl bg-indigo-600/10 border border-indigo-500/30 flex items-center justify-center text-indigo-400 font-mono font-bold mb-4">02</div>
+                    <h3 class="text-lg font-bold text-white mb-2">Advanced Core Platform</h3>
+                    <p class="text-slate-400 text-xs leading-relaxed">
+                        Scale into a robust multi-tenant municipal management system supporting AI-driven emergency triage and offline-first mobile sync.
+                    </p>
+                </div>
+
+                <!-- Roadmap Card 3 -->
+                <div class="bg-cardbg border border-slate-800 rounded-2xl p-6 relative shadow-xl hover:border-emerald-500/40 transition-all">
+                    <div class="w-10 h-10 rounded-xl bg-emerald-600/10 border border-emerald-500/30 flex items-center justify-center text-emerald-400 font-mono font-bold mb-4">03</div>
+                    <h3 class="text-lg font-bold text-white mb-2">Successful Municipal Pilots</h3>
+                    <p class="text-slate-400 text-xs leading-relaxed">
+                        Active deployment across key Abuja Area Councils, proving rapid incident response reductions and verified government case studies.
+                    </p>
+                </div>
+
+                <!-- Roadmap Card 4 -->
+                <div class="bg-cardbg border border-slate-800 rounded-2xl p-6 relative shadow-xl hover:border-purple-500/40 transition-all">
+                    <div class="w-10 h-10 rounded-xl bg-purple-600/10 border border-purple-500/30 flex items-center justify-center text-purple-400 font-mono font-bold mb-4">04</div>
+                    <h3 class="text-lg font-bold text-white mb-2">Series A Readiness</h3>
+                    <p class="text-slate-400 text-xs leading-relaxed">
+                        Establish verified traction metrics and high citizen adoption rates to seamlessly raise an expansion round in Phase 2.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Use of Funds Breakdown Table ($745k / ~1.117B NGN) -->
+            <div class="bg-cardbg border border-slate-800 rounded-3xl p-6 md:p-8 shadow-2xl">
+                <div class="flex flex-col md:flex-row justify-between items-start md:items-center pb-6 border-b border-slate-800 mb-6 gap-4">
+                    <div>
+                        <h3 class="text-xl font-bold text-white">Use of Funds Breakdown</h3>
+                        <p class="text-xs text-slate-400">Detailed allocation of the $745,000 (~₦1,117,500,000) Phase 1 seed target</p>
+                    </div>
+                    <div class="bg-blue-600/10 border border-blue-500/30 px-4 py-2 rounded-xl text-blue-400 font-mono font-bold text-sm">
+                        Total Target: $745,000 (₦1.117B)
+                    </div>
+                </div>
+
+                <!-- Desktop Table View -->
+                <div class="hidden md:block overflow-x-auto">
+                    <table class="w-full text-left border-collapse">
+                        <thead>
+                            <tr class="text-xs uppercase tracking-wider text-slate-400 border-b border-slate-800">
+                                <th class="py-3 px-4">Expense Category</th>
+                                <th class="py-3 px-4">Strategic Focus & Scope</th>
+                                <th class="py-3 px-4 text-right">USD ($)</th>
+                                <th class="py-3 px-4 text-right">NGN (₦)</th>
+                            </tr>
+                        </thead>
+                        <tbody class="divide-y divide-slate-800/60 text-sm">
+                            <tr>
+                                <td class="py-4 px-4 font-semibold text-white">Core Engineering Team</td>
+                                <td class="py-4 px-4 text-slate-400">Salaries for senior full-stack engineers scaling core platform architectures & mobile apps</td>
+                                <td class="py-4 px-4 text-right font-mono text-white">$180,000</td>
+                                <td class="py-4 px-4 text-right font-mono text-slate-300">₦270,000,000</td>
+                            </tr>
+                            <tr>
+                                <td class="py-4 px-4 font-semibold text-white">Abuja Operating HQ</td>
+                                <td class="py-4 px-4 text-slate-400">Lease of professional office in Abuja (12 mos), utilities, fiber internet, security</td>
+                                <td class="py-4 px-4 text-right font-mono text-white">$150,000</td>
+                                <td class="py-4 px-4 text-right font-mono text-slate-300">₦225,000,000</td>
+                            </tr>
+                            <tr>
+                                <td class="py-4 px-4 font-semibold text-white">Marketing & Outreach</td>
+                                <td class="py-4 px-4 text-slate-400">Citizen awareness campaigns, media announcements, community advocacy partnerships</td>
+                                <td class="py-4 px-4 text-right font-mono text-white">$100,000</td>
+                                <td class="py-4 px-4 text-right font-mono text-slate-300">₦150,000,000</td>
+                            </tr>
+                            <tr>
+                                <td class="py-4 px-4 font-semibold text-white">Municipal Pilots</td>
+                                <td class="py-4 px-4 text-slate-400">Stakeholder workshops, field agents, council onboarding logistics across Abuja Area Councils</td>
+                                <td class="py-4 px-4 text-right font-mono text-white">$80,000</td>
+                                <td class="py-4 px-4 text-right font-mono text-slate-300">₦120,000,000</td>
+                            </tr>
+                            <tr>
+                                <td class="py-4 px-4 font-semibold text-white">Cloud Infrastructure</td>
+                                <td class="py-4 px-4 text-slate-400">Enterprise multi-region cloud hosting, server scaling, database redundancy, security compliance</td>
+                                <td class="py-4 px-4 text-right font-mono text-white">$75,000</td>
+                                <td class="py-4 px-4 text-right font-mono text-slate-300">₦112,500,000</td>
+                            </tr>
+                            <tr>
+                                <td class="py-4 px-4 font-semibold text-white">Legal & Contingency</td>
+                                <td class="py-4 px-4 text-slate-400">CAC/Startup Act filings, NDPR security audits, legal advisory, contingency buffer</td>
+                                <td class="py-4 px-4 text-right font-mono text-white">$60,000</td>
+                                <td class="py-4 px-4 text-right font-mono text-slate-300">₦90,000,000</td>
+                            </tr>
+                        </tbody>
+                        <tfoot>
+                            <tr class="border-t-2 border-slate-700 font-bold text-white bg-slate-900/50">
+                                <td class="py-4 px-4" colspan="2">Total Phase 1 Seed Target</td>
+                                <td class="py-4 px-4 text-right font-mono text-blue-400">$745,000</td>
+                                <td class="py-4 px-4 text-right font-mono text-blue-400">₦1,117,500,000</td>
+                            </tr>
+                        </tfoot>
+                    </table>
+                </div>
+
+                <!-- Mobile Responsive Card List View for Table Data -->
+                <div class="block md:hidden space-y-4">
+                    <div class="bg-slate-900/60 border border-slate-800 p-4 rounded-xl">
+                        <div class="flex justify-between items-start mb-2">
+                            <span class="font-bold text-white text-sm">Core Engineering Team</span>
+                            <span class="font-mono text-blue-400 text-sm">$180k / ₦270m</span>
+                        </div>
+                        <p class="text-xs text-slate-400">Salaries for senior full-stack engineers scaling core platform architectures & mobile apps</p>
+                    </div>
+                    <div class="bg-slate-900/60 border border-slate-800 p-4 rounded-xl">
+                        <div class="flex justify-between items-start mb-2">
+                            <span class="font-bold text-white text-sm">Abuja Operating HQ</span>
+                            <span class="font-mono text-blue-400 text-sm">$150k / ₦225m</span>
+                        </div>
+                        <p class="text-xs text-slate-400">Lease of professional office in Abuja (12 mos), utilities, fiber internet, security</p>
+                    </div>
+                    <div class="bg-slate-900/60 border border-slate-800 p-4 rounded-xl">
+                        <div class="flex justify-between items-start mb-2">
+                            <span class="font-bold text-white text-sm">Marketing & Outreach</span>
+                            <span class="font-mono text-blue-400 text-sm">$100k / ₦150m</span>
+                        </div>
+                        <p class="text-xs text-slate-400">Citizen awareness campaigns, media announcements, community advocacy partnerships</p>
+                    </div>
+                    <div class="bg-slate-900/60 border border-slate-800 p-4 rounded-xl">
+                        <div class="flex justify-between items-start mb-2">
+                            <span class="font-bold text-white text-sm">Municipal Pilots</span>
+                            <span class="font-mono text-blue-400 text-sm">$80k / ₦120m</span>
+                        </div>
+                        <p class="text-xs text-slate-400">Stakeholder workshops, field agents, council onboarding logistics across Abuja Area Councils</p>
+                    </div>
+                    <div class="bg-slate-900/60 border border-slate-800 p-4 rounded-xl">
+                        <div class="flex justify-between items-start mb-2">
+                            <span class="font-bold text-white text-sm">Cloud Infrastructure</span>
+                            <span class="font-mono text-blue-400 text-sm">$75k / ₦112.5m</span>
+                        </div>
+                        <p class="text-xs text-slate-400">Enterprise multi-region cloud hosting, server scaling, database redundancy, security compliance</p>
+                    </div>
+                    <div class="bg-slate-900/60 border border-slate-800 p-4 rounded-xl">
+                        <div class="flex justify-between items-start mb-2">
+                            <span class="font-bold text-white text-sm">Legal & Contingency</span>
+                            <span class="font-mono text-blue-400 text-sm">$60k / ₦90m</span>
+                        </div>
+                        <p class="text-xs text-slate-400">CAC/Startup Act filings, NDPR security audits, legal advisory, contingency buffer</p>
+                    </div>
+                    <div class="bg-blue-950/40 border border-blue-500/40 p-4 rounded-xl flex justify-between items-center">
+                        <span class="font-bold text-white text-sm">Total Phase 1 Seed Target</span>
+                        <span class="font-mono font-bold text-blue-400 text-sm">$745,000 (₦1.117B)</span>
+                    </div>
+                </div>
+
+                <!-- Founder Contact Callout -->
+                <div class="mt-8 pt-6 border-t border-slate-800 flex flex-col sm:flex-row justify-between items-center gap-4 text-center sm:text-left">
+                    <div>
+                        <div class="text-sm font-bold text-white">Emeka Precious Enyioha</div>
+                        <div class="text-xs text-slate-400">Founder & CEO, Abujafix Solutions Limited (RC: 9777836) | Phone/WhatsApp: 08034106662</div>
+                    </div>
+                    <a href="#mo-request" class="bg-blue-600 hover:bg-blue-500 text-white text-xs font-semibold px-5 py-2.5 rounded-xl transition-all shadow-md shrink-0">
+                        Request Executive Briefing / MoU
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+                                                                                                    
+    <!-- Interactive MoU / Grant Request Modal Form -->
+    <section id="mo-request" class="py-20 border-t border-slate-900/60 bg-darkbg">
+        <div class="max-w-3xl mx-auto px-6">
+            <div class="bg-cardbg border border-slate-800 rounded-3xl p-8 md:p-12 shadow-2xl relative overflow-hidden">
+                <div class="absolute bottom-0 left-0 w-64 h-64 bg-indigo-600/5 rounded-full blur-3xl pointer-events-none"></div>
+                <div class="text-center mb-8">
+                    <h3 class="text-2xl font-bold tracking-tight text-white mb-2">Request Official MoU / Grant Documentation</h3>
+                    <p class="text-slate-400 text-sm">For institutional investors, public sector partners, and grant committees.</p>
+                </div>
+                <form onsubmit="event.preventDefault(); alert('Request submitted successfully. The Office of the CEO will reach out.');" class="space-y-4">
+                    <div>
+                        <label class="block text-xs font-semibold text-slate-400 uppercase mb-1">Organization / Agency Name</label>
+                        <input type="text" required class="w-full bg-slate-900 border border-slate-800 rounded-xl px-4 py-3 text-white text-sm focus:outline-none focus:border-blue-500 transition-colors" placeholder="e.g., Municipal Development Fund">
+                    </div>
+                    <div class="grid sm:grid-cols-2 gap-4">
+                        <div>
+                            <label class="block text-xs font-semibold text-slate-400 uppercase mb-1">Official Contact Email</label>
+                            <input type="email" required class="w-full bg-slate-900 border border-slate-800 rounded-xl px-4 py-3 text-white text-sm focus:outline-none focus:border-blue-500 transition-colors" placeholder="rep@agency.org">
+                        </div>
+                        <div>
+                            <label class="block text-xs font-semibold text-slate-400 uppercase mb-1">Inquiry Type</label>
+                            <select class="w-full bg-slate-900 border border-slate-800 rounded-xl px-4 py-3 text-white text-sm focus:outline-none focus:border-blue-500 transition-colors">
+                                <option>Institutional Grant / Funding</option>
+                                <option>Memorandum of Understanding (MoU)</option>
+                                <option>Pilot Deployment Partnership</option>
+                            </select>
+                        </div>
+                    </div>
+                    <button type="submit" class="w-full bg-blue-600 hover:bg-blue-500 text-white py-3.5 rounded-xl font-semibold transition-all shadow-lg shadow-blue-600/30 mt-4 cursor-pointer hover:scale-[1.01]">Submit Official Inquiry</button>
+                </form>
+            </div>
+        </div>
+    </section>
+                                
+    <!-- Footer -->
+    <footer class="border-t border-slate-900/80 py-12 text-center text-sm text-slate-500 bg-slate-950/60">
+        <div class="max-w-7xl mx-auto px-6">
+            <p>&copy; 2026 Abujafix Solutions Limited (RC: 9777836). All rights reserved. Abuja, FCT, Nigeria.</p>
+        </div>
+    </footer>
+
+    <!-- Clipboard Interaction Script -->
+    <script>
+        function copyToClipboard(text, btn) {
+            navigator.clipboard.writeText(text).then(() => {
+                let originalText = btn.innerText;
+                btn.innerText = 'Copied!';
+                btn.classList.add('bg-blue-600', 'text-white');
+                setTimeout(() => {
+                    btn.innerText = originalText;
+                    btn.classList.remove('bg-blue-600', 'text-white');
+                }, 2000);
+            });
+        }
+    </script>
+            
+</body>
+</html>
