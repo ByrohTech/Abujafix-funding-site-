@@ -1,1 +1,248 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Abujafix | Municipal Intelligence & Incident Command</title>
+    <!-- Tailwind CSS for modern, high-end styling -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        darker: '#090d16',
+                        cardbg: '#111827',
+                        accent: '#3b82f6',
+                        neonGlow: '#60a5fa'
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- FontAwesome for futuristic icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @keyframes pulse-ring {
+            0% { transform: scale(0.95); opacity: 0.8; }
+            50% { transform: scale(1.4); opacity: 0; }
+            100% { transform: scale(0.95); opacity: 0; }
+        }
+        .map-pulse {
+            animation: pulse-ring 2.5s cubic-bezier(0.215, 0.61, 0.355, 1) infinite;
+        }
+        /* Custom futuristic grid background effect */
+        .bg-grid {
+            background-size: 40px 40px;
+            background-image: linear-gradient(to right, rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+                              linear-gradient(to bottom, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+        }
+    </style>
+</head>
+<body class="bg-darker text-gray-100 font-sans antialiased min-h-screen flex flex-col selection:bg-blue-500 selection:text-white">
 
+    <!-- Top Navigation Bar -->
+    <header class="border-b border-gray-800 bg-darker/80 backdrop-blur-md sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+            <div class="flex items-center space-x-3">
+                <div class="h-9 w-9 rounded-lg bg-blue-600/20 border border-blue-500/40 flex items-center justify-center text-blue-400 font-bold tracking-wider">
+                    AF
+                </div>
+                <div>
+                    <span class="font-semibold text-lg tracking-tight">AbujaFix</span>
+                    <span class="text-xs block text-blue-400 font-mono tracking-widest uppercase">Command Center</span>
+                </div>
+            </div>
+
+            <!-- Navigation Links -->
+            <nav class="hidden md:flex items-center space-x-6 text-sm font-medium">
+                <a href="index.html" class="text-gray-400 hover:text-white transition">Home</a>
+                <a href="reports.html" class="text-blue-400 font-semibold border-b-2 border-blue-500 pb-1">Live Feed & Map</a>
+                <a href="#analytics" class="text-gray-400 hover:text-white transition">Analytics</a>
+            </nav>
+
+            <!-- Subtle Domain Display -->
+            <div class="text-xs font-mono text-gray-500 tracking-wider bg-gray-900/50 px-3 py-1.5 rounded-full border border-gray-800">
+                🌐 abujafix.com
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Command Center Layout -->
+    <main class="flex-grow max-w-7xl w-full mx-auto px-4 sm:px-6 lg:px-8 py-8 grid grid-cols-1 lg:grid-cols-3 gap-8">
+        
+        <!-- Left & Center: Interactive Abuja Map & Geospatial Feed (2 Columns on large screens) -->
+        <section class="lg:col-span-2 space-y-6">
+            
+            <!-- Header status row -->
+            <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 bg-cardbg p-5 rounded-2xl border border-gray-800">
+                <div>
+                    <h1 class="text-xl font-bold tracking-tight text-white flex items-center gap-2">
+                        <i class="fa-solid fa-radar text-blue-500"></i> FCT Geospatial Intelligence Grid
+                    </h1>
+                    <p class="text-xs text-gray-400 mt-1">Real-time telemetry tracking municipal infrastructure across Abuja districts.</p>
+                </div>
+                <div class="flex items-center gap-2">
+                    <span class="inline-flex items-center px-2.5 py-1 rounded-full text-xs font-medium bg-emerald-500/10 text-emerald-400 border border-emerald-500/20">
+                        <span class="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse mr-1.5"></span> Live Telemetry
+                    </span>
+                </div>
+            </div>
+
+            <!-- Futuristic Interactive Map Component -->
+            <div class="relative w-full h-[420px] rounded-2xl overflow-hidden border border-gray-800 bg-[#0c121d] bg-grid flex items-center justify-center shadow-2xl">
+                
+                <!-- Map Background Stylized grid representation of Abuja regions -->
+                <div class="absolute inset-0 opacity-40 bg-[radial-gradient(#3b82f6_1px,transparent_1px)] [background-size:24px_24px]"></div>
+                
+                <!-- Stylized Abuja Regional Vector Outlines (Visual Mock) -->
+                <div class="absolute inset-0 flex items-center justify-center pointer-events-none opacity-20">
+                    <div class="w-[300px] h-[300px] rounded-full border border-dashed border-blue-400"></div>
+                    <div class="absolute w-[500px] h-[500px] rounded-full border border-dashed border-gray-600"></div>
+                </div>
+
+                <!-- Center map text indicator -->
+                <div class="absolute top-4 left-4 bg-darker/90 backdrop-blur border border-gray-800 px-3 py-1.5 rounded-lg text-xs font-mono text-gray-400">
+                    LAT: 9.0765° N | LNG: 7.3986° E (Abuja Metropolitan)
+                </div>
+
+                <!-- Interactive Pin 1: Maitama (Critical Issue) -->
+                <div class="absolute top-[35%] left-[45%] group cursor-pointer">
+                    <div class="absolute -inset-3 bg-red-500/20 rounded-full map-pulse"></div>
+                    <div class="relative w-4 h-4 bg-red-500 rounded-full border-2 border-white shadow-lg flex items-center justify-center"></div>
+                    <!-- Popup Card on Hover -->
+                    <div class="absolute bottom-6 left-1/2 -translate-x-1/2 w-48 bg-cardbg border border-gray-700 p-2.5 rounded-xl shadow-2xl opacity-0 group-hover:opacity-100 transition-all pointer-events-none z-30 text-xs">
+                        <span class="text-red-400 font-semibold block mb-0.5">⚠️ Maitama District</span>
+                        <p class="text-gray-300">Collapsed drainage system along Ahmadu Bello Way.</p>
+                        <span class="text-[10px] text-gray-500 mt-1 block">Status: Pending Intervention</span>
+                    </div>
+                </div>
+
+                <!-- Interactive Pin 2: Wuse 2 (In Progress) -->
+                <div class="absolute top-[50%] left-[38%] group cursor-pointer">
+                    <div class="absolute -inset-3 bg-amber-500/20 rounded-full map-pulse"></div>
+                    <div class="relative w-4 h-4 bg-amber-500 rounded-full border-2 border-white shadow-lg flex items-center justify-center"></div>
+                    <div class="absolute bottom-6 left-1/2 -translate-x-1/2 w-48 bg-cardbg border border-gray-700 p-2.5 rounded-xl shadow-2xl opacity-0 group-hover:opacity-100 transition-all pointer-events-none z-30 text-xs">
+                        <span class="text-amber-400 font-semibold block mb-0.5">⚡ Wuse Zone 4</span>
+                        <p class="text-gray-300">Non-functional traffic signaling grid.</p>
+                        <span class="text-[10px] text-gray-500 mt-1 block">Status: Crew Dispatched</span>
+                    </div>
+                </div>
+
+                <!-- Interactive Pin 3: Garki (Resolved) -->
+                <div class="absolute top-[65%] left-[55%] group cursor-pointer">
+                    <div class="relative w-4 h-4 bg-emerald-500 rounded-full border-2 border-white shadow-lg flex items-center justify-center"></div>
+                    <div class="absolute bottom-6 left-1/2 -translate-x-1/2 w-48 bg-cardbg border border-gray-700 p-2.5 rounded-xl shadow-2xl opacity-0 group-hover:opacity-100 transition-all pointer-events-none z-30 text-xs">
+                        <span class="text-emerald-400 font-semibold block mb-0.5">✅ Garki Area 2</span>
+                        <p class="text-gray-300">Pothole patching completed successfully.</p>
+                        <span class="text-[10px] text-gray-500 mt-1 block">Status: Resolved</span>
+                    </div>
+                </div>
+
+                <!-- Map Controls Overlay -->
+                <div class="absolute bottom-4 right-4 flex gap-2">
+                    <button class="bg-cardbg/90 hover:bg-gray-800 border border-gray-700 text-gray-300 px-3 py-1.5 rounded-lg text-xs font-mono transition">
+                        <i class="fa-solid fa-layer-group mr-1"></i> Layers
+                    </button>
+                    <button class="bg-cardbg/90 hover:bg-gray-800 border border-gray-700 text-gray-300 px-3 py-1.5 rounded-lg text-xs font-mono transition">
+                        <i class="fa-solid fa-arrows-to-dot mr-1"></i> Reset View
+                    </button>
+                </div>
+            </div>
+
+            <!-- Quick Live Metric Counters -->
+            <div class="grid grid-cols-3 gap-4">
+                <div class="bg-cardbg p-4 rounded-xl border border-gray-800">
+                    <span class="text-xs text-gray-400 block font-medium">Total Incidents</span>
+                    <span class="text-2xl font-bold text-white mt-1 block font-mono">1,428</span>
+                    <span class="text-[10px] text-emerald-400 mt-1 block">↑ 12% resolution rate</span>
+                </div>
+                <div class="bg-cardbg p-4 rounded-xl border border-gray-800">
+                    <span class="text-xs text-gray-400 block font-medium">Active Crews</span>
+                    <span class="text-2xl font-bold text-blue-400 mt-1 block font-mono">38</span>
+                    <span class="text-[10px] text-blue-400 mt-1 block">Deployed across AMAC</span>
+                </div>
+                <div class="bg-cardbg p-4 rounded-xl border border-gray-800">
+                    <span class="text-xs text-gray-400 block font-medium">Avg Response</span>
+                    <span class="text-2xl font-bold text-amber-400 mt-1 block font-mono">4.2 hrs</span>
+                    <span class="text-[10px] text-gray-400 mt-1 block">Target: < 6 hrs</span>
+                </div>
+            </div>
+
+        </section>
+
+        <!-- Right Column: Live Feed & Incident Stream -->
+        <section class="space-y-6">
+            <div class="bg-cardbg rounded-2xl border border-gray-800 p-5 flex flex-col h-full">
+                <div class="flex items-center justify-between pb-4 border-b border-gray-800">
+                    <h2 class="font-bold text-sm text-white tracking-wide uppercase flex items-center gap-2">
+                        <i class="fa-solid fa-stream text-blue-500"></i> Incoming Reports
+                    </h2>
+                    <span class="text-xs font-mono text-gray-400">Live Feed</span>
+                </div>
+
+                <!-- Feed list container -->
+                <div class="divide-y divide-gray-800/60 overflow-y-auto flex-grow max-h-[500px] mt-2 space-y-3">
+                    
+                    <!-- Item 1 -->
+                    <div class="pt-3 group cursor-pointer">
+                        <div class="flex items-center justify-between mb-1">
+                            <span class="text-xs font-semibold text-red-400 bg-red-500/10 px-2 py-0.5 rounded border border-red-500/20">Critical • Roads</span>
+                            <span class="text-[10px] text-gray-500 font-mono">10m ago</span>
+                        </div>
+                        <p class="text-xs text-gray-200 font-medium group-hover:text-blue-400 transition">Main expressway failure near Asokoro junction causing gridlock.</p>
+                        <span class="text-[10px] text-gray-400 mt-1 block"><i class="fa-solid fa-location-dot text-gray-500 mr-1"></i> Asokoro District</span>
+                    </div>
+
+                    <!-- Item 2 -->
+                    <div class="pt-3 group cursor-pointer">
+                        <div class="flex items-center justify-between mb-1">
+                            <span class="text-xs font-semibold text-amber-400 bg-amber-500/10 px-2 py-0.5 rounded border border-amber-500/20">Warning • Lighting</span>
+                            <span class="text-[10px] text-gray-500 font-mono">35m ago</span>
+                        </div>
+                        <p class="text-xs text-gray-200 font-medium group-hover:text-blue-400 transition">Dark corridor span along Constitution Avenue due to vandalized transformer node.</p>
+                        <span class="text-[10px] text-gray-400 mt-1 block"><i class="fa-solid fa-location-dot text-gray-500 mr-1"></i> Central Business District</span>
+                    </div>
+
+                    <!-- Item 3 -->
+                    <div class="pt-3 group cursor-pointer">
+                        <div class="flex items-center justify-between mb-1">
+                            <span class="text-xs font-semibold text-blue-400 bg-blue-500/10 px-2 py-0.5 rounded border border-blue-500/20">Routine • Sanitation</span>
+                            <span class="text-[10px] text-gray-500 font-mono">1h ago</span>
+                        </div>
+                        <p class="text-xs text-gray-200 font-medium group-hover:text-blue-400 transition">Blocked storm water channel backing up onto access lane.</p>
+                        <span class="text-[10px] text-gray-400 mt-1 block"><i class="fa-solid fa-location-dot text-gray-500 mr-1"></i> Garki II</span>
+                    </div>
+
+                    <!-- Item 4 -->
+                    <div class="pt-3 group cursor-pointer">
+                        <div class="flex items-center justify-between mb-1">
+                            <span class="text-xs font-semibold text-emerald-400 bg-emerald-500/10 px-2 py-0.5 rounded border border-emerald-500/20">Resolved • Water</span>
+                            <span class="text-[10px] text-gray-500 font-mono">3h ago</span>
+                        </div>
+                        <p class="text-xs text-gray-200 font-medium group-hover:text-blue-400 transition">Pipe leakage fixed by maintenance squad.</p>
+                        <span class="text-[10px] text-gray-400 mt-1 block"><i class="fa-solid fa-location-dot text-gray-500 mr-1"></i> Utako</span>
+                    </div>
+
+                </div>
+
+                <!-- Action CTA at bottom of feed -->
+                <div class="mt-4 pt-4 border-t border-gray-800">
+                    <a href="index.html" class="w-full bg-blue-600 hover:bg-blue-500 text-white font-medium py-2 rounded-xl text-xs transition flex items-center justify-center gap-2 shadow-lg shadow-blue-600/20">
+                        <i class="fa-solid fa-plus-circle"></i> Log New Municipal Ticket
+                    </a>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="border-t border-gray-800/60 bg-darker py-6 text-center text-xs text-gray-500">
+        <p>Abuja Municipal Infrastructure Feedback System &copy; 2026. Powered for FCT City Guidance.</p>
+    </footer>
+
+</body>
+  </html>
+                  
